@@ -1,6 +1,6 @@
 class Solution {
     public int solution(int[][] lines) {
-               //1.계산용 수평선(parallelline) 만들기 -100 ~ 100 -> 0 ~ 200 (모든 수 +100)
+        //1.계산용 수평선(parallelline) 만들기 -100 ~ 100 -> 0 ~ 200 (모든 수 +100)
         int [] parallelLine = new int[200];
 
         //2. lines에서 line 하나씩 꺼내. 수평선에 넣어. 그런데 line의 오른쪽 젤끝 수는 +1 안함.
