@@ -8,7 +8,7 @@ class Solution {
             charForOrder[i][1] = strings[i];
         }
 
-        // 2. charForOrder[i](0)의 값에 따라 정렬시킴. 결과 예시 : [{a,apple}, {b,bed}, {c,car}] << 이게 일단 되나 해봐야함.
+        // 2. charForOrder[i](0)의 값에 따라 정렬시킴. 결과 예시 : [{a,apple}, {b,bed}, {c,car}] << 이게 일단 되나 해봐야함. : 됨
         Arrays.sort(charForOrder, (o1, o2) -> {
            if(o1[0].equals(o2[0])){
                // (1) [0] 이 같은경우 : [1] 끼리 비교 compareTo 쓰는거같음...? 아마도...
@@ -28,7 +28,7 @@ class Solution {
                    return -1;
            }
         }
-            return 0; // 이건 왜있는지 모르겠음... 근데 이거 안하면 에러남.
+            return 0; // 이건 왜있는지 모르겠음... 근데 이거 안하면 에러남. >> 이유 :  비교결과가 3가지 1. 왼쪽꺼가 크다 2. 오른쪽꺼가 크다 3. 두값이 같을때
         });
 
             // 3. charForOrder[i](1)의 값만 담긴 answer 출력
