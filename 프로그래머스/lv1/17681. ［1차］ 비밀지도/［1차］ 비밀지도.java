@@ -14,14 +14,14 @@ class Solution {
 
         //2. arrMap1&2 에 든 2진수 값이 n자리가 되도록 만들기. ex) n이 5일때, (2진수)10 >> "00010" 으로
         for (int i = 0 ; i < n ; i ++){
-            arrMap1[i] = String.format("%"+n+"s",arrMap1[i]).replace(" ","0"); // 지금 여기서 포멧에 문제가 있음!!
+            arrMap1[i] = String.format("%"+n+"s",arrMap1[i]).replace(" ","0"); // 지금 여기서 포멧에 문제가 있음!! : 해결 20번째열 arrMap1[i]로 써놨었다 -ㅅ-;
         }
         for (int i = 0 ; i < n ; i ++){
             arrMap2[i] = String.format("%"+n+"s",arrMap2[i]).replace(" ","0");
         }
 
 
-        //3, arrMap1[i][0~n] arrMap2[i][0~n] 서로 비교해서 1 하나라도 있으면 # , 둘다 0이면 ""인 식으로 answer만듬.
+        //3, arrMap1[i][0~n] arrMap2[i][0~n] 서로 비교해서 1 하나라도 있으면 # , 둘다 0이면 ""인 식으로 oneLine 배열만듬 > 그 배열을 answer의 원소(toString)로하고, 출력값조정.
         String[] answer = new String[n];
 
         for(int i = 0; i < n ; i ++) {
@@ -36,7 +36,7 @@ class Solution {
 
             }
             answer[i] = Arrays.toString(oneLine);
-            answer[i] = answer[i].replaceAll("\\[", "");
+            answer[i] = answer[i].replaceAll("\\[", ""); // 출력값 조정.. 이게 최선인가??? 
             answer[i] = answer[i].replaceAll("\\]", "");
             answer[i] = answer[i].replaceAll(", ", "");
         }
