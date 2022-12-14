@@ -25,7 +25,7 @@ class Solution {
         String[] answer = new String[n];
 
         for(int i = 0; i < n ; i ++) {
-        String[] oneLine = new String[n];
+        String[] oneLine = new String[n]; // 여기서 한번에 oneLine을 글자n개짜리 String으로하고 split("")[j]=뭐뭐 이런식으로 하려했더니, split[j] 는 원본 string에 값 적용이 안되더라.
             for (int j = 0; j < n; j++) {
                 if (arrMap1[i].split("")[j].equals("1") || arrMap2[i].split("")[j].equals("1")){
                     oneLine[j]="#";
